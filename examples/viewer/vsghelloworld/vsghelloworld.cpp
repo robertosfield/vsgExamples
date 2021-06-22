@@ -9,7 +9,7 @@ int main(int argc, char** argv)
     // set up vsg::Options to pass in filepaths and ReaderWriter's and other IO realted options to use when reading and writing files.
     auto options = vsg::Options::create(vsgXchange::all::create());
     options->fileCache = vsg::getEnv("VSG_FILE_CACHE");
-    options->paths = vsg::getEnvPaths("VSG_FILE_FILE");
+    options->paths = vsg::getEnvPaths("VSG_FILE_PATH");
     arguments.read(options);
 
     vsg::Path filename = "https://raw.githubusercontent.com/robertosfield/TestData/master/Earth_VSG/earth.vsgb";

@@ -521,6 +521,8 @@ int main(int argc, char** argv)
 
     vsg::Path filename;
     if (argc > 1) filename = arguments[1];
+    options->fileCache = vsg::getEnv("VSG_FILE_CACHE");
+    options->paths = vsg::getEnvPaths("VSG_FILE_PATH");
 
     auto vsg_scene = vsg::read_cast<vsg::Node>(filename, options);
     if (!vsg_scene)

@@ -266,7 +266,7 @@ int main(int argc, char** argv)
     }
     else
     {
-        vsg::Path filename = "models/lz.osgt";
+        vsg::Path filename = "models/lz.vsgt";
         if (argc > 1) filename = arguments[1];
 
         vsg_scene = vsg::read_cast<vsg::Node>(filename, options);
